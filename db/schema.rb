@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_07_100902) do
+ActiveRecord::Schema.define(version: 2019_06_07_124722) do
 
   create_table "basket_customers", force: :cascade do |t|
     t.integer "basket_id"
@@ -62,11 +62,6 @@ ActiveRecord::Schema.define(version: 2019_06_07_100902) do
   end
 
   create_table "customers", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "adress"
-    t.string "phone"
-    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
@@ -74,10 +69,6 @@ ActiveRecord::Schema.define(version: 2019_06_07_100902) do
   end
 
   create_table "farmers", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "farm"
@@ -97,11 +88,17 @@ ActiveRecord::Schema.define(version: 2019_06_07_100902) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "email"
     t.string "password_digest"
-    t.boolean "isAdmin"
+    t.boolean "isAdmin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "customer_id"
+    t.integer "farmer_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "address"
+    t.string "phone"
   end
 
 end

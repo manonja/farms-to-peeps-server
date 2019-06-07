@@ -1,8 +1,10 @@
 class ApplicationController < ActionController::API
+    
     def get_current_user
         id = decode_token
         User.find_by(id: id)
     end
+    
 
     def decode_token 
         token = get_token

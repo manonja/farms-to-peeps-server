@@ -1,5 +1,5 @@
 class Customer < ApplicationRecord
-    belong_to :user
+    belongs_to :user
     has_one :basket 
     has_many :products, through: :basket 
     has_many :farmer_customers 
