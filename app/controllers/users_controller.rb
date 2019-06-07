@@ -67,7 +67,7 @@ class UsersController < ApplicationController
         if user
             render json: user
         else
-            render json: {error: "Erorr creating farmer"}, status: 400
+            render json: {error: "Error creating farmer"}, status: 400
         end
     end
 
