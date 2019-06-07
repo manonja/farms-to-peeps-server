@@ -1,13 +1,5 @@
 class UsersController < ApplicationController
     
-    # def user_type
-    #     #get the params from fetch 
-    #     if user_type === 'farmer'
-
-    #     else 
-            
-    # end
-    
     def signin
         # find user then authenticate
         user = User.find_by(email: params[:email])
