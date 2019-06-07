@@ -5,7 +5,6 @@ class ApplicationController < ActionController::API
         User.find_by(id: id)
     end
     
-
     def decode_token 
         token = get_token
         begin 
