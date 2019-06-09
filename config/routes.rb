@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :customers, only: [:index, :show, :create, :new]
   resources :farmers, only: [:index, :new, :create, :show]
   resources :products, only: [:index, :new, :create, :show, :destroy]
+  resources :baskets, only: [:index, :new, :create, :show, :destroy]
+  # resources :basket_products, [:index, :new, :create, :show, :destroy]
 
   post '/signin', to: 'users#signin'
   post '/signup', to: 'users#signup'

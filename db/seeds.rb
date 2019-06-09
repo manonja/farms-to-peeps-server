@@ -189,6 +189,35 @@ farmers = Farmer.create([
     }
 ])
 
+baskets = Basket.create([
+    {
+        customer_id: 1
+    }
+])
+
+baskets_products = BasketProduct.create([
+    {
+        basket_id: 1,
+        product_id: 2
+    },
+    {
+        basket_id: 1,
+        product_id: 3
+    },
+    {
+        basket_id: 1,
+        product_id: 4
+    },
+    {
+        basket_id: 1,
+        product_id: 5
+    },
+    {
+        basket_id: 1,
+        product_id: 6
+    },
+])
+
 customers = Customer.create([
     {
         user_id: users.first.id

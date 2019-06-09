@@ -3,6 +3,8 @@ class UsersController < ApplicationController
     def signin
         # find user then authenticate
         user = User.find_by(email: params[:email])
+        # puts user
+        
         if user && user.authenticate(params[:password])
           render json: {token: issue_token(id: user.id)}
         else
