@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     
-    def signin
+  
+  def signin
         # find user then authenticate
         user = User.find_by(email: params[:email])
         # puts user
@@ -15,7 +16,9 @@ class UsersController < ApplicationController
       def signup
         # find user then authenticate
         user = User.create(email: params[:email], password: params[:password])
-
+        
+        user.define_user_type(params[:user_type], user.id)
+        user.save
         # puts user
         # byebug
         if user 
@@ -67,6 +70,6 @@ class UsersController < ApplicationController
 
     private
     def user_params
-    params.require(:user).permit(:id, :email, :isAdmin, :password)
+    params.require(:user).permit(:id, :first_name, :last_name, :address, :phone, :email, :isAdmin, :customer_id, :farmer_id, :password)
     end
 end
