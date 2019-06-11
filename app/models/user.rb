@@ -2,6 +2,9 @@ class User < ApplicationRecord
     has_one :farmer
     has_one :customer 
 
+    validates :email, presence: true, uniqueness: true
+    validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+
     has_secure_password
 
     def define_user_type (user_type, id)
@@ -14,6 +17,7 @@ class User < ApplicationRecord
             customer = Customer.create(user_id: id) 
             self.customer_id = customer.id 
             customer.save
+        
          
         else 
             user_type == '' 

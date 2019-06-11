@@ -4,7 +4,7 @@ class FarmerSerializer < ActiveModel::Serializer
   has_many :products
 
   class ProductSerializer < ActiveModel::Serializer
-    attributes :name, :price, :quantity, :url_img 
+    attributes :name, :price, :quantity, :url_img, :id
   end
 
 end
