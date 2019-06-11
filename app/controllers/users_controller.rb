@@ -4,10 +4,9 @@ class UsersController < ApplicationController
   def signin
         # find user then authenticate
         user = User.find_by(email: params[:email])
-        # puts user
-        
+        # puts user  
         if user && user.authenticate(params[:password])
-          render json: {token: issue_token(id: user.id)}
+          render json: {token: issue_token(id: user.id), user: user}
         else
           render json: {error: 'user/password combo not found'}, status: 400
         end
@@ -15,10 +14,11 @@ class UsersController < ApplicationController
     
       def signup
         # find user then authenticate
-        user = User.create(email: params[:email], password: params[:password])
+        user = User.create(email: params[:email], password: params[:password], first_name: params[:first_name], last_name: params[:last_name], address: params[:address], phone: params[:phone])
         
         user.define_user_type(params[:user_type], user.id)
         user.save
+        
         # puts user
         # byebug
         if user 
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       def validate 
         user = get_current_user
         if user
-          render json: {email: user.email}
+          render json: {email: user.email, user: user}
         else
           render json: {error: 'invalid user'}, status: 404
         end

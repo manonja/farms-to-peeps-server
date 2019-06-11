@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
       def create
         id = params[:id]
     
-        product = Product.find_by(id)
+        product = Product.create(product_params)
     
         if product
           render json: product
@@ -30,10 +30,11 @@ class ProductsController < ApplicationController
       end
     
       def destroy
-        product = Product.find_by(product_params)
+        product = Product.find_by(id: params[:id])
         if product
           product.destroy
-          render json: {message: "Meme destroyed"}
+          
+          render json: {message: "Product destroyed"}
         else
           render json: {error: "Could not destroy"}, status: 404
         end
@@ -41,6 +42,6 @@ class ProductsController < ApplicationController
     
       private
       def product_params
-        params.require(:product).permit(:id, :name, :price, :quantity, :url, :farmer_id)
+        params.require(:product).permit(:id, :name, :price, :quantity, :url_img, :farmer_id)
       end
 end
