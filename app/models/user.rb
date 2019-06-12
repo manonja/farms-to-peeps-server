@@ -16,9 +16,7 @@ class User < ApplicationRecord
         elsif user_type == 'customer'
             customer = Customer.create(user_id: id) 
             self.customer_id = customer.id 
-            customer.save
-        
-         
+            customer.save     
         else 
             user_type == '' 
         end    

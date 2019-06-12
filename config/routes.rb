@@ -3,13 +3,17 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :create, :new]
   resources :customers, only: [:index, :show, :create, :new]
   resources :farmers, only: [:index, :new, :create, :show]
+  resources :categories, only: [:index, :new, :create, :show]
   resources :products, only: [:index, :new, :create, :show, :destroy]
   resources :baskets, only: [:index, :new, :create, :show, :destroy]
-  # resources :basket_products, [:index, :new, :create, :show, :destroy]
+  resources :basket_products, only: [:index, :new, :create, :show, :destroy]
+  resources :category_products, only: [:index, :new, :create, :show, :destroy]
+
+
 
   post '/signin', to: 'users#signin'
   post '/signup', to: 'users#signup'
   get '/validate', to: 'users#validate'
-
+  post '/remove', to: 'basket_products#remove'
 
 end

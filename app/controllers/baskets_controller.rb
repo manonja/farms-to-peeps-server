@@ -30,7 +30,7 @@ class BasketsController < ApplicationController
       end
     
       def destroy
-        basket = Basket.find_by(basket_params)
+        basket = Basket.find_by(id: params[:id])
         if basket
           basket.destroy
           render json: {message: "Meme destroyed"}
