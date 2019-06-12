@@ -5,6 +5,39 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+users = User.create([
+    {   
+        first_name: 'John',
+        last_name: 'Smith',
+        email: 'pf@farmers.com',
+        address: '34 Moon St, E6W 1TY, London',
+        phone: '07345324353',
+        isAdmin: false,
+        password: 'wrsdfdqs',
+        farmer_id: 1
+
+    },
+    {   
+        first_name: 'Bob',
+        last_name: 'Dylan',
+        email: 'pfeff@farmers.com',
+        address: '34 Star St, E6W 1TY, CharkFarm',
+        phone: '23563483444',
+        isAdmin: false,
+        password: 'cklamsk;d.a,',
+        customer_id: 1
+
+    }
+])
+
+farmers = Farmer.create([
+    {   
+        farm: 'Patch Farm',
+        user_id: users.first.id
+    }
+])
+
 products = Product.create([
     {   
         name: 'Pears',
@@ -157,41 +190,72 @@ products = Product.create([
     }
 ])
 
-users = User.create([
-    {   
-        first_name: 'John',
-        last_name: 'Smith',
-        email: 'pf@farmers.com',
-        address: '34 Moon St, E6W 1TY, London',
-        phone: '07345324353',
-        isAdmin: false,
-        password: 'wrsdfdqs',
-        farmer_id: 1
-
-    },
-    {   
-        first_name: 'Bob',
-        last_name: 'Dylan',
-        email: 'pf@farmers.com',
-        address: '34 Star St, E6W 1TY, CharkFarm',
-        phone: '23563483444',
-        isAdmin: false,
-        password: 'cklamsk;d.a,',
-        customer_id: 1
-
-    }
-])
-
-farmers = Farmer.create([
-    {   
-        farm: 'Patch Farm',
-        user_id: users.last.id
-    }
-])
-
 baskets = Basket.create([
     {
         customer_id: 1
+    }
+])
+
+categories = Category.create([
+    {
+        name: 'Fruit', 
+        product_id: 11
+    },
+    {
+        name: 'Fruit', 
+        product_id: 17
+    },
+    {
+        name: 'Fruit', 
+        product_id: 1
+    },
+    {
+        name: 'Fruit', 
+        product_id: 3
+    },
+    {
+        name: 'Fruit', 
+        product_id: 5
+    },
+    {
+        name: 'Fruit', 
+        product_id: 9
+    },
+    {
+        name: 'Vegetable', 
+        product_id: 2
+    },
+    {
+        name: 'Vegetable', 
+        product_id: 4
+    },
+    {
+        name: 'Vegetable', 
+        product_id: 6
+    },
+    {
+        name: 'Vegetable', 
+        product_id: 7
+    },
+    {
+        name: 'Vegetable', 
+        product_id: 10
+    },
+    {
+        name: 'Vegetable', 
+        product_id: 12
+    },
+    {
+        name: 'Vegetable', 
+        product_id: 13
+    },
+    {
+        name: 'Vegetable', 
+        product_id: 14
+    },
+    {
+        name: 'Bakery', 
+        product_id: 8
     }
 ])
 
@@ -220,7 +284,7 @@ baskets_products = BasketProduct.create([
 
 customers = Customer.create([
     {
-        user_id: users.first.id
+        user_id: users.last.id
     }
     
 ])
