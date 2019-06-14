@@ -1,8 +1,10 @@
 class CategoriesController < ApplicationController
     def index
         categories = Category.all
-        render json: categories
-      end
+        
+        render json: categories.map(&:name).uniq
+      
+    end
     
       def new
         category = Category.new

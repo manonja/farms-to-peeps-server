@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_07_124722) do
+ActiveRecord::Schema.define(version: 2019_06_12_141056) do
 
   create_table "basket_customers", force: :cascade do |t|
     t.integer "basket_id"
@@ -41,15 +41,8 @@ ActiveRecord::Schema.define(version: 2019_06_07_124722) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "category_products", force: :cascade do |t|
-    t.integer "category_id"
     t.integer "product_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_category_products_on_category_id"
-    t.index ["product_id"], name: "index_category_products_on_product_id"
+    t.index ["product_id"], name: "index_categories_on_product_id"
   end
 
   create_table "customer_farmers", force: :cascade do |t|
@@ -78,7 +71,7 @@ ActiveRecord::Schema.define(version: 2019_06_07_124722) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
+    t.float "price"
     t.string "quantity"
     t.string "url_img"
     t.integer "farmer_id"
