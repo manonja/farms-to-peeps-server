@@ -48,6 +48,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
+    ast (2.4.0)
     bcrypt (3.1.12)
     binding.repl (3.0.0)
     bootsnap (1.4.4)
@@ -102,6 +103,7 @@ GEM
       ruby_info (~> 1.0)
       ruby_version (~> 1.0)
       wirb (~> 2.0)
+    jaro_winkler (1.5.2)
     jsonapi-renderer (0.2.0)
     jwt (2.2.1)
     listen (3.1.5)
@@ -129,6 +131,9 @@ GEM
     ori (0.1.0)
     os (1.0.0)
     paint (2.1.0)
+    parallel (1.17.0)
+    parser (2.6.3.0)
+      ast (~> 2.4.0)
     puma (3.12.1)
     rack (2.0.7)
     rack-cors (1.0.3)
@@ -158,14 +163,24 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
+    rainbow (3.0.0)
     rake (12.3.2)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    rubocop (0.71.0)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.6)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 1.7)
+    ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
     ruby_engine (1.0.1)
     ruby_info (1.0.1)
     ruby_version (1.0.1)
+    rufo (0.7.0)
     spoon (0.0.6)
       ffi
     spring (2.0.2)
@@ -206,6 +221,8 @@ DEPENDENCIES
   puma (~> 3.11)
   rack-cors
   rails (~> 5.2.3)
+  rubocop
+  rufo
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

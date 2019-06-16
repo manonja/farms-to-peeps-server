@@ -15,9 +15,7 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#signup'
   get '/validate', to: 'users#validate'
   post '/remove', to: 'basket_products#remove'
-  get '/fruit', to: 'products#fruit'
-  get '/vegetable', to: 'products#vegetable'
-  get '/bakery', to: 'products#bakery'
+  get '/profile', to: 'users#profile'
 
 
 end
