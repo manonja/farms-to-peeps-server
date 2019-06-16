@@ -1,9 +1,9 @@
 class BasketProductsController < ApplicationController
     
   def remove
-    basketProduct = BasketProduct.find_by(product_id: params[:product_id], basket_id: params[:basket_id])
-    if basketProduct
-      basketProduct.destroy
+    basket_product = BasketProduct.find_by(product_id: params[:product_id], basket_id: params[:basket_id])
+    if basket_product
+      basket_product.destroy
       render json: {message: "Relationship destroyed"}
     else
       render json: {error: "Could not destroy"}, status: 404
@@ -39,9 +39,9 @@ class BasketProductsController < ApplicationController
   end
 
   def destroy
-    basketProduct = BasketProduct.find_by(basketProduct_params)
-    if basketProduct
-      basketProduct.destroy
+    basket_product = BasketProduct.find_by(basket_product_params)
+    if basket_product
+      basket_product.destroy
       render json: {message: "Relationship destroyed"}
     else
       render json: {error: "Could not destroy"}, status: 404
@@ -49,7 +49,7 @@ class BasketProductsController < ApplicationController
   end
 
   private
-  def basketProduct_params
+  def basket_product_params
     params.require(:basketProduct).permit(:product_id, :basket_id)
   end
 end

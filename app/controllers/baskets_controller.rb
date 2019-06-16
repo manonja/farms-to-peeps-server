@@ -5,7 +5,7 @@ class BasketsController < ApplicationController
   end
 
   def new
-    basket = Basket.new
+    Basket.new
   end
 
   def show
@@ -18,11 +18,9 @@ class BasketsController < ApplicationController
   end
 
   def create
-    id = params[:id]
+    basket = Basket.find_or_create_by(basket_params)
 
-    basket = Basket.find_or_create_by(id)
-
-    if product
+    if basket
       render json: basket
     else
       render json: { error: "Erorr creating basket" }, status: 400
@@ -30,10 +28,10 @@ class BasketsController < ApplicationController
   end
 
   def destroy
-    basket = Basket.find_by(id: params[:id])
+    basket = Basket.find_by(basket_params)
     if basket
       basket.destroy
-      render json: { message: "Meme destroyed" }
+      render json: { message: "basket destroyed" }
     else
       render json: { error: "Could not destroy" }, status: 404
     end
@@ -42,6 +40,6 @@ class BasketsController < ApplicationController
   private
 
   def basket_params
-    params.require(:basket).permit(:id, :customer_id)
+    params.require(:basket).permit(:customer_id)
   end
 end
