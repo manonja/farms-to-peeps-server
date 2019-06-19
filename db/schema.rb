@@ -9,95 +9,87 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-ActiveRecord::Schema.define(version: 2019_06_12_141056) do
-  create_table 'basket_customers', force: :cascade do |t|
-    t.integer 'basket_id'
-    t.integer 'customer_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['basket_id'], name: 'index_basket_customers_on_basket_id'
-    t.index ['customer_id'], name: 'index_basket_customers_on_customer_id'
+
+ActiveRecord::Schema.define(version: 2019_06_19_073853) do
+
+  create_table "basket_customers", force: :cascade do |t|
+    t.integer "basket_id"
+    t.integer "customer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["basket_id"], name: "index_basket_customers_on_basket_id"
+    t.index ["customer_id"], name: "index_basket_customers_on_customer_id"
   end
 
-  create_table 'basket_products', force: :cascade do |t|
-    t.integer 'basket_id'
-    t.integer 'product_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    # TODO: add quantity 
-    t.index ['basket_id'], name: 'index_basket_products_on_basket_id'
-    t.index ['product_id'], name: 'index_basket_products_on_product_id'
+  create_table "basket_products", force: :cascade do |t|
+    t.integer "basket_id"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["basket_id"], name: "index_basket_products_on_basket_id"
+    t.index ["product_id"], name: "index_basket_products_on_product_id"
   end
 
-  create_table 'baskets', force: :cascade do |t|
-    t.integer 'customer_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['customer_id'], name: 'index_baskets_on_customer_id'
+  create_table "baskets", force: :cascade do |t|
+    t.integer "customer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_baskets_on_customer_id"
   end
 
-  create_table 'categories', force: :cascade do |t|
-    t.string 'name'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.integer 'product_id'
-    t.index ['product_id'], name: 'index_categories_on_product_id'
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'customer_farmers', force: :cascade do |t|
-    t.integer 'customer_id'
-    t.integer 'farmer_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['customer_id'], name: 'index_customer_farmers_on_customer_id'
-    t.index ['farmer_id'], name: 'index_customer_farmers_on_farmer_id'
+  create_table "customer_farmers", force: :cascade do |t|
+    t.integer "customer_id"
+    t.integer "farmer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_customer_farmers_on_customer_id"
+    t.index ["farmer_id"], name: "index_customer_farmers_on_farmer_id"
   end
 
-  create_table 'customers', force: :cascade do |t|
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.integer 'user_id'
-    t.index ['user_id'], name: 'index_customers_on_user_id'
+  create_table "customers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
-  create_table 'farmers', force: :cascade do |t|
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.string 'farm'
-    t.integer 'user_id'
-    t.index ['user_id'], name: 'index_farmers_on_user_id'
-    # TODO: add short description
-    # TODO: add image
-    # TODO: add profile description
+  create_table "farmers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "farm"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_farmers_on_user_id"
   end
 
-  create_table 'products', force: :cascade do |t|
-    t.string 'name'
-    t.float 'price'
-    t.string 'quantity' # TODO: turn to integer
-    t.string 'url_img'
-    t.integer 'farmer_id'
-    # TODO: add unity e.g. 500 g, 1L, etc.
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['farmer_id'], name: 'index_products_on_farmer_id'
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
+    t.string "quantity"
+    t.string "url_img"
+    t.integer "farmer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["farmer_id"], name: "index_products_on_farmer_id"
   end
 
-  # TODO: possiblity factor out unity by creating
-  # main product
-  # and products table links back to unity combined with base product
-
-  create_table 'users', force: :cascade do |t|
-    t.string 'email'
-    t.string 'password_digest'
-    t.boolean 'isAdmin', default: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.integer 'customer_id'
-    t.integer 'farmer_id'
-    t.string 'first_name'
-    t.string 'last_name'
-    t.string 'address'
-    t.string 'phone'
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.boolean "isAdmin", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "customer_id"
+    t.integer "farmer_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "address"
+    t.string "phone"
   end
+
 end
