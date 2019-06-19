@@ -25,6 +25,8 @@ gem 'active_model_serializers'
 # gem 'capistrano-rails', group: :development
 gem 'irbtools', require: 'irbtools/binding'
 
+# Images upload
+gem 'paperclip', '~> 5.1.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
