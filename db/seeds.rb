@@ -10,22 +10,22 @@ users = User.create([
     {   
         first_name: 'John',
         last_name: 'Smith',
-        email: 'pf@farmers.com',
-        address: '34 Moon St, E6W 1TY, London',
+        email: 'john@me.com',
+        address: '34 Moon St',
         phone: '07345324353',
         isAdmin: false,
-        password: 'wrsdfdqs',
+        password: 'john',
         farmer_id: 1
 
     },
     {   
         first_name: 'Bob',
         last_name: 'Dylan',
-        email: 'pfeff@farmers.com',
-        address: '34 Star St, E6W 1TY, CharkFarm',
+        email: 'bob@me.com',
+        address: '34 Star St',
         phone: '23563483444',
         isAdmin: false,
-        password: 'cklamsk;d.a,',
+        password: 'bob',
         customer_id: 1
 
     }
@@ -49,9 +49,6 @@ categories = Category.create([
     },
     {
         name: 'Pantry'
-    },
-    {
-        name: 'Farm Boxes'
     }
 ])
 
@@ -80,6 +77,30 @@ products = Product.create([
         url_img: 'https://images.unsplash.com/photo-1518735869015-566a18eae4be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
     },
     {
+        name: 'Lemon',
+        price: 1.49,
+        quantity: '6 pieces',
+        category_id: 1,
+        farmer_id: 2,
+        url_img: 'https://images.unsplash.com/photo-1519625149185-7626ff3a86bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
+    },
+    {
+        name: 'Apricots',
+        price: 4.50,
+        quantity: '500g',
+        category_id: 1,
+        farmer_id: 2,
+        url_img: 'https://images.unsplash.com/photo-1560797516-c37d011000e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+    },
+    {
+        name: 'Yellow Peaches',
+        price: 3.20,
+        quantity: '8 pieces',
+        category_id: 1,
+        farmer_id: 2,
+        url_img: 'https://images.unsplash.com/photo-1542296663-c8002b3c8422?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2266&q=80'
+    },
+    {
         name: 'Apples',
         price: 2,
         quantity: '1 kg',
@@ -88,12 +109,76 @@ products = Product.create([
         url_img: 'https://images.unsplash.com/photo-1549301014-95d119f5c960?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
     },
     {
+        name: 'Zucchinis',
+        price: 3.30,
+        quantity: '6 pieces',
+        category_id: 2,
+        farmer_id: 2,
+        url_img: 'https://images.unsplash.com/photo-1549223672-c262a3763aab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+    },
+    {
+        name: 'Avocados',
+        price: 3.00,
+        quantity: '6 pieces',
+        category_id: 2,
+        farmer_id: 2,
+        url_img: 'https://images.unsplash.com/photo-1512070904629-fa988dab2fe1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+    },
+    {
+        name: 'Green Beans',
+        price: 2.10,
+        quantity: '500g',
+        category_id: 2,
+        farmer_id: 1,
+        url_img: 'https://images.unsplash.com/uploads/141143339879512fe9b0d/f72e2c85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+    },
+    {
+        name: 'Green Beans',
+        price: 2.10,
+        quantity: '500g',
+        category_id: 2,
+        farmer_id: 1,
+        url_img: 'https://images.unsplash.com/uploads/141143339879512fe9b0d/f72e2c85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+    },
+    {
         name: 'Beef',
         price: 8.50,
         quantity: '500g',
         category_id: 4,
         farmer_id: 2,
         url_img: 'http://cdn.shopify.com/s/files/1/1844/0771/products/84b26ca83f6ab9914c49f65957d4329f_grande.jpg?v=1511148760'
+    },
+    {
+        name: 'Sirloin Steak',
+        price: 10.50,
+        quantity: '800g',
+        category_id: 4,
+        farmer_id: 2,
+        url_img: 'https://images.unsplash.com/photo-1448907503123-67254d59ca4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80'
+    },
+    {
+        name: 'Organic Italian Sausage',
+        price: 6.50,
+        quantity: '500g',
+        category_id: 4,
+        farmer_id: 2,
+        url_img: 'https://cdn.thehealthybutcher.com/images/P/the-healthy-butcher-mild-italian-630g.jpg'
+    },
+    {
+        name: 'Pasture-raised Bacon',
+        price: 5.50,
+        quantity: '500g',
+        category_id: 4,
+        farmer_id: 2,
+        url_img: 'https://images.unsplash.com/photo-1529856426070-e610ede5a2fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80'
+    },
+    {
+        name: 'Breakfast Salami',
+        price: 4.80,
+        quantity: '300g',
+        category_id: 4,
+        farmer_id: 2,
+        url_img: 'https://images.unsplash.com/photo-1542901031-ec5eeb518e83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
     },
     {
         name: 'Brussels Sprouts',
@@ -105,11 +190,11 @@ products = Product.create([
     },
     {
         name: 'Spinach',
-        price: 1.50,
+        price: 1.20,
         quantity: '500g',
         category_id: 2,
         farmer_id: 1,
-        url_img: 'https://www.bbcgoodfood.com/sites/default/files/glossary/spinach.jpg'
+        url_img: 'https://images.unsplash.com/photo-1550411294-875307bccdd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
     },
     {
         name: 'Strawberries',
@@ -137,14 +222,14 @@ products = Product.create([
     },
     {
         name: 'Cucumbers',
-        price: 2,
+        price: 1.80,
         quantity: '500g',
         category_id: 2,
         farmer_id: 1,
         url_img: 'https://munchies-images.vice.com/wp_upload/cucumber-tesco-valentines-day.jpg?crop=0.7111111111111111xw%3A1xh%3Bcenter%2Ccenter&resize=650%3A*&output-quality=55'
     },
     {
-        name: 'Tomatoes',
+        name: 'Mixed Tomatoes',
         price: 3.50,
         quantity: '500g',
         category_id: 1,
@@ -158,6 +243,38 @@ products = Product.create([
         category_id: 3,
         farmer_id: 1,
         url_img: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--77451_11.jpg?itok=7W6mnqnB'
+    },
+    {
+        name: 'Croissants',
+        price: 5.20,
+        quantity: '6 pieces',
+        category_id: 3,
+        farmer_id: 1,
+        url_img: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80'
+    },
+    {
+        name: 'Mini Breads',
+        price: 4.90,
+        quantity: '3 pieces',
+        category_id: 3,
+        farmer_id: 1,
+        url_img: 'https://images.unsplash.com/photo-1511278475330-1a31a6fc4dcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80'
+    },
+    {
+        name: 'Bastard Bread',
+        price: 5.90,
+        quantity: '1 piece',
+        category_id: 3,
+        farmer_id: 1,
+        url_img: 'https://images.unsplash.com/photo-1515823808611-65fd8e56c71a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+    },
+    {
+        name: 'Baguette',
+        price: 1.20,
+        quantity: '1 piece',
+        category_id: 3,
+        farmer_id: 1,
+        url_img: 'https://images.unsplash.com/photo-1533782654613-826a072dd6f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1001&q=80'
     },
     {
         name: 'Rhubarb',
@@ -205,7 +322,23 @@ products = Product.create([
         quantity: '500g',
         category_id: 2,
         farmer_id: 2,
-        url_img: 'http://eatdrinkpaleo.com.au/wp-content/uploads/2016/10/jerusalem-artichoke-recipes.jpg',
+        url_img: 'http://eatdrinkpaleo.com.au/wp-content/uploads/2016/10/jerusalem-artichoke-recipes.jpg'
+    },
+    {
+        name: 'Honey',
+        price: 6.50,
+        quantity: '1 pot - 500g',
+        farmer_id: 2,
+        category_id: 6,
+        url_img: 'https://www.abelandcole.co.uk/media/1606_18557_z.jpg'
+    },
+    {
+        name: 'Almond Ginger Butter',
+        price: 8.60,
+        quantity: '1 pot - 500g',
+        farmer_id: 2,
+        category_id: 6,
+        url_img: 'https://images.unsplash.com/photo-1552329823-d0818712cf3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
     },
     {
         name: 'Wild Scottish Salmon',
@@ -214,6 +347,46 @@ products = Product.create([
         farmer_id: 2,
         category_id: 5,
         url_img: 'https://images.costco-static.com/ImageDelivery/imageService?profileId=12026540&itemId=1214619-847&recipeName=680'
+    },
+    {
+        name: 'Mussels',
+        price: 6.95,
+        quantity: '1kg',
+        farmer_id: 2,
+        category_id: 5,
+        url_img: 'https://images.unsplash.com/photo-1466553556096-7e2c49388e34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80'
+    },
+    {
+        name: 'Oysters',
+        price: 7.25,
+        quantity: '6 pieces',
+        farmer_id: 2,
+        category_id: 5,
+        url_img: 'https://images.unsplash.com/photo-1557496897-125a203038eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
+    },
+    {
+        name: 'Smoked Haddock',
+        price: 6.50,
+        quantity: '260g',
+        farmer_id: 2,
+        category_id: 5,
+        url_img: 'https://s3.amazonaws.com/parkers-production/cache/product_hero/2018/09/14/5b9c0cbfabaac.jpg'
+    },
+    {
+        name: 'Arbroath Smokies',
+        price: 11.50,
+        quantity: '1 packet',
+        farmer_id: 2,
+        category_id: 5,
+        url_img: 'https://cdn.shopify.com/s/files/1/0607/6073/products/uV0aH1B_48269eb1-8a6c-4dea-884b-8e25f6b9900c_1024x1024.jpeg?v=1440148578'
+    },
+    {
+        name: 'Pink Shrimps',
+        price: 5.50,
+        quantity: '100g',
+        farmer_id: 2,
+        category_id: 5,
+        url_img: 'https://images.unsplash.com/photo-1548587468-971ebe4c8c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
     }
 ])
 

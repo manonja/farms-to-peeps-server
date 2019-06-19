@@ -22,7 +22,7 @@ class BasketsController < ApplicationController
 
     basket = Basket.find_or_create_by(id)
 
-    if product
+    if basket
       render json: basket
     else
       render json: { error: "Erorr creating basket" }, status: 400
