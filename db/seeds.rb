@@ -65,7 +65,7 @@ farmers = Farmer.create([
 products = Product.create([
     {   
         name: 'Pears',
-        price: 2.44,
+        price: 2.50,
         quantity: '1 kg',
         category_id: 1,
         farmer_id: 1,
@@ -73,7 +73,7 @@ products = Product.create([
     },
     {
         name: 'Artichokes',
-        price: 2.44,
+        price: 3.60,
         quantity: '3 pieces',
         category_id: 2,
         farmer_id: 1,
@@ -81,7 +81,7 @@ products = Product.create([
     },
     {
         name: 'Apples',
-        price: 2.44,
+        price: 2,
         quantity: '1 kg',
         category_id: 1,
         farmer_id: 1,
@@ -89,7 +89,7 @@ products = Product.create([
     },
     {
         name: 'Beef',
-        price: 2.44,
+        price: 8.50,
         quantity: '500g',
         category_id: 4,
         farmer_id: 2,
@@ -97,7 +97,7 @@ products = Product.create([
     },
     {
         name: 'Brussels Sprouts',
-        price: 2.44,
+        price: 2,
         quantity: '500g',
         category_id: 2,
         farmer_id: 2,
@@ -105,15 +105,15 @@ products = Product.create([
     },
     {
         name: 'Spinach',
-        price: 2.44,
+        price: 1.50,
         quantity: '500g',
         category_id: 2,
         farmer_id: 1,
-        url_img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB98mv6B3Vp2UgJnCDFqTUDT6TobU-R7xYUkgqNBkwCQjL9O5Dtg'
+        url_img: 'https://www.bbcgoodfood.com/sites/default/files/glossary/spinach.jpg'
     },
     {
         name: 'Strawberries',
-        price: 2.44,
+        price: 2.50,
         quantity: '500g',
         category_id: 1,
         farmer_id: 1,
@@ -121,7 +121,7 @@ products = Product.create([
     },
     {
         name: 'Peas',
-        price: 2.44,
+        price: 2,
         quantity: '500g',
         category_id: 2,
         farmer_id: 1,
@@ -129,7 +129,7 @@ products = Product.create([
     },
     {
         name: 'Melon',
-        price: 2.44,
+        price: 3,
         quantity: '3 pieces',
         category_id: 1,
         farmer_id: 2,
@@ -137,7 +137,7 @@ products = Product.create([
     },
     {
         name: 'Cucumbers',
-        price: 2.44,
+        price: 2,
         quantity: '500g',
         category_id: 2,
         farmer_id: 1,
@@ -145,7 +145,7 @@ products = Product.create([
     },
     {
         name: 'Tomatoes',
-        price: 2.44,
+        price: 3.50,
         quantity: '500g',
         category_id: 1,
         farmer_id: 2,
@@ -153,7 +153,7 @@ products = Product.create([
     },
     {
         name: 'Rye Bread',
-        price: 2.44,
+        price: 6,
         quantity: '1 piece',
         category_id: 3,
         farmer_id: 1,
@@ -161,7 +161,7 @@ products = Product.create([
     },
     {
         name: 'Rhubarb',
-        price: 2.44,
+        price: 5,
         quantity: '500g',
         category_id: 1,
         farmer_id: 1,
@@ -169,7 +169,7 @@ products = Product.create([
     },
     {
         name: 'Tuscan Kale',
-        price: 2.44,
+        price: 1.50,
         quantity: '1 bunch',
         category_id: 2,
         farmer_id: 1,
@@ -177,7 +177,7 @@ products = Product.create([
     },
     {
         name: 'Green apples',
-        price: 2.44,
+        price: 2,
         quantity: '1kg',
         category_id: 1,
         farmer_id: 1,
@@ -185,7 +185,7 @@ products = Product.create([
     },
     {
         name: 'Blue Potatoes',
-        price: 2.44,
+        price: 2,
         quantity: '2kg',
         category_id: 2,
         farmer_id: 2,
@@ -193,7 +193,7 @@ products = Product.create([
     },
     {
         name: 'Broccoli',
-        price: 2.44,
+        price: 1.50,
         quantity: '3 pieces',
         category_id: 2,
         farmer_id: 1,
@@ -201,7 +201,7 @@ products = Product.create([
     },
     {
         name: 'Jerusalem Artichokes',
-        price: 2.44,
+        price: 2.50,
         quantity: '500g',
         category_id: 2,
         farmer_id: 2,

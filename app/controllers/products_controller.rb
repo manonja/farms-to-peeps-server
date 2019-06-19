@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    byebug
+    
     product = Product.new(name: params[:name], price: params[:price], quantity: params[:quantity], url_img: params[:url_img], farmer_id: params[:farmer_id])  
 
     product.category = Category.find_by(name: params[:category])
