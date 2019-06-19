@@ -135,7 +135,7 @@ products = Product.create([
     {
         name: 'Rye Bread',
         price: 2.44,
-        quantity: '1 piece' ,
+        quantity: '1 piece',
         farmer_id: 1,
         url_img: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--77451_11.jpg?itok=7W6mnqnB'
     },
@@ -187,7 +187,15 @@ products = Product.create([
         quantity: '500g',
         farmer_id: 2,
         url_img: 'http://eatdrinkpaleo.com.au/wp-content/uploads/2016/10/jerusalem-artichoke-recipes.jpg'
+    },
+    {
+        name: 'Wild Scottish Salmon',
+        price: 10.50,
+        quantity: '400g',
+        farmer_id: 2,
+        url_img: 'https://images.costco-static.com/ImageDelivery/imageService?profileId=12026540&itemId=1214619-847&recipeName=680'
     }
+    
 ])
 
 baskets = Basket.create([
@@ -198,64 +206,25 @@ baskets = Basket.create([
 
 categories = Category.create([
     {
-        name: 'Fruit', 
-        product_id: 11
+        name: 'Fruit'
     },
     {
-        name: 'Fruit', 
-        product_id: 17
+        name: 'Vegetable'
     },
     {
-        name: 'Fruit', 
-        product_id: 1
+        name: 'Bakery'
     },
     {
-        name: 'Fruit', 
-        product_id: 3
+        name: 'Meat'
     },
     {
-        name: 'Fruit', 
-        product_id: 5
+        name: 'Fish'
     },
     {
-        name: 'Fruit', 
-        product_id: 9
+        name: 'Pantry'
     },
     {
-        name: 'Vegetable', 
-        product_id: 2
-    },
-    {
-        name: 'Vegetable', 
-        product_id: 4
-    },
-    {
-        name: 'Vegetable', 
-        product_id: 6
-    },
-    {
-        name: 'Vegetable', 
-        product_id: 7
-    },
-    {
-        name: 'Vegetable', 
-        product_id: 10
-    },
-    {
-        name: 'Vegetable', 
-        product_id: 12
-    },
-    {
-        name: 'Vegetable', 
-        product_id: 13
-    },
-    {
-        name: 'Vegetable', 
-        product_id: 14
-    },
-    {
-        name: 'Bakery', 
-        product_id: 8
+        name: 'Farm Boxes'
     }
 ])
 
