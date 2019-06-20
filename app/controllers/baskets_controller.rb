@@ -18,11 +18,9 @@ class BasketsController < ApplicationController
   end
 
   def create
-    id = params[:id]
+    basket = Basket.find_or_create_by(customer_id: params[:customer_id])
 
-    basket = Basket.find_or_create_by(id)
-
-    if product
+    if basket
       render json: basket
     else
       render json: { error: "Erorr creating basket" }, status: 400
