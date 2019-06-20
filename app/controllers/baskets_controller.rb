@@ -18,9 +18,7 @@ class BasketsController < ApplicationController
   end
 
   def create
-    id = params[:id]
-
-    basket = Basket.find_or_create_by(id)
+    basket = Basket.find_or_create_by(customer_id: params[:customer_id])
 
     if basket
       render json: basket
