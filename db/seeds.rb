@@ -82,7 +82,7 @@ products = Product.create([
         quantity: '6 pieces',
         category_id: 1,
         farmer_id: 2,
-        url_img: 'https://images.unsplash.com/photo-1519625149185-7626ff3a86bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
+        url_img: 'https://www.realfoods.co.uk/ProductImagesID/277_1.jpg'
     },
     {
         name: 'Apricots',
@@ -90,7 +90,7 @@ products = Product.create([
         quantity: '500g',
         category_id: 1,
         farmer_id: 2,
-        url_img: 'https://images.unsplash.com/photo-1560797516-c37d011000e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+        url_img: 'https://images.unsplash.com/photo-1501746877-14782df58970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
     },
     {
         name: 'Yellow Peaches',
@@ -102,6 +102,14 @@ products = Product.create([
     },
     {
         name: 'Apples',
+        price: 1.60,
+        quantity: '250g',
+        category_id: 1,
+        farmer_id: 1,
+        url_img: 'https://images.unsplash.com/photo-1515681412668-16d6d4a54ab1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80'
+    },
+    {
+        name: 'Rasberries',
         price: 2,
         quantity: '1 kg',
         category_id: 1,
@@ -115,6 +123,14 @@ products = Product.create([
         category_id: 2,
         farmer_id: 2,
         url_img: 'https://images.unsplash.com/photo-1549223672-c262a3763aab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+    },
+    {
+        name: 'Brown onions',
+        price: 1.30,
+        quantity: '500g',
+        category_id: 2,
+        farmer_id: 2,
+        url_img: 'https://images.unsplash.com/photo-1518977956812-cd3dbadaaf31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
     },
     {
         name: 'Avocados',
@@ -157,12 +173,12 @@ products = Product.create([
         url_img: 'https://images.unsplash.com/photo-1448907503123-67254d59ca4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80'
     },
     {
-        name: 'Organic Italian Sausage',
+        name: 'Homemade Italian Sausage',
         price: 6.50,
         quantity: '500g',
         category_id: 4,
         farmer_id: 2,
-        url_img: 'https://cdn.thehealthybutcher.com/images/P/the-healthy-butcher-mild-italian-630g.jpg'
+        url_img: 'https://www.manusmenu.com/wp-content/uploads/2013/07/2-Salsiccia-3-1-of-1.jpg'
     },
     {
         name: 'Pasture-raised Bacon',
@@ -194,7 +210,7 @@ products = Product.create([
         quantity: '500g',
         category_id: 2,
         farmer_id: 1,
-        url_img: 'https://images.unsplash.com/photo-1550411294-875307bccdd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+        url_img: 'https://www.adaptiveseeds.com/wp-content/uploads/2014/12/p-10485-spinach_verdil2.jpg'
     },
     {
         name: 'Strawberries',
@@ -221,6 +237,14 @@ products = Product.create([
         url_img: 'https://www.adaptiveseeds.com/wp-content/uploads/2014/12/p-7997-melon_farthest_north4.jpg'
     },
     {
+        name: 'Blueburries',
+        price: 1.90,
+        quantity: '150g',
+        category_id: 1,
+        farmer_id: 2,
+        url_img: 'https://images.unsplash.com/photo-1425934398893-310a009a77f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80'
+    },
+    {
         name: 'Cucumbers',
         price: 1.80,
         quantity: '500g',
@@ -234,7 +258,7 @@ products = Product.create([
         quantity: '500g',
         category_id: 1,
         farmer_id: 2,
-        url_img: 'https://www.mamanatural.com/wp-content/uploads/28-Things-to-Do-With-Too-Many-Tomatoes-tips-by-Mama-Natural-750x422.jpg'
+        url_img: 'https://images.unsplash.com/photo-1443131612988-32b6d97cc5da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
     },
     {
         name: 'Rye Bread',
@@ -250,7 +274,23 @@ products = Product.create([
         quantity: '6 pieces',
         category_id: 3,
         farmer_id: 1,
-        url_img: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80'
+        url_img: 'https://www.foodiewithfamily.com/wp-content/uploads/2020/04/How-to-make-croissants-2.jpg'
+    },
+    {
+        name: 'Pain au Raisin',
+        price: 2.90,
+        quantity: '3 pieces',
+        category_id: 3,
+        farmer_id: 1,
+        url_img: 'https://www.thespruceeats.com/thmb/1I6a8k1SGUBcpO_7ea4Ax_VixB4=/2250x2250/smart/filters:no_upscale()/pain-aux-raisins-GettyImages-124761833-57b5975f3df78cd39c5f6f73.jpg'
+    },
+    {
+        name: 'Olive Bread',
+        price: 3.90,
+        quantity: '3 pieces',
+        category_id: 3,
+        farmer_id: 1,
+        url_img: 'https://i.ytimg.com/vi/ZCPJ4tKj5A4/maxresdefault.jpg'
     },
     {
         name: 'Mini Breads',
@@ -274,7 +314,7 @@ products = Product.create([
         quantity: '1 piece',
         category_id: 3,
         farmer_id: 1,
-        url_img: 'https://images.unsplash.com/photo-1533782654613-826a072dd6f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1001&q=80'
+        url_img: 'https://www.surlatable.com/images/customers/c1079/PRO-2635449/PRO-2635449_detail/zoom_variation_Default_view_1_1278x1278.jpg'
     },
     {
         name: 'Rhubarb',
@@ -326,19 +366,19 @@ products = Product.create([
     },
     {
         name: 'Honey',
-        price: 6.50,
+        price: 5.50,
         quantity: '1 pot - 500g',
         farmer_id: 2,
         category_id: 6,
         url_img: 'https://www.abelandcole.co.uk/media/1606_18557_z.jpg'
     },
     {
-        name: 'Almond Ginger Butter',
-        price: 8.60,
+        name: 'Organic Almond Butter',
+        price: 6.60,
         quantity: '1 pot - 500g',
         farmer_id: 2,
         category_id: 6,
-        url_img: 'https://images.unsplash.com/photo-1552329823-d0818712cf3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+        url_img: 'https://simple-veganista.com/wp-content/uploads/2012/09/homemade-almond-butter-8.jpg'
     },
     {
         name: 'Wild Scottish Salmon',
@@ -381,12 +421,12 @@ products = Product.create([
         url_img: 'https://cdn.shopify.com/s/files/1/0607/6073/products/uV0aH1B_48269eb1-8a6c-4dea-884b-8e25f6b9900c_1024x1024.jpeg?v=1440148578'
     },
     {
-        name: 'Pink Shrimps',
-        price: 5.50,
-        quantity: '100g',
+        name: 'Shrimps',
+        price: 6.50,
+        quantity: '300g',
         farmer_id: 2,
         category_id: 5,
-        url_img: 'https://images.unsplash.com/photo-1548587468-971ebe4c8c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
+        url_img: 'https://foodprint.org/wp-content/uploads/2018/10/imageedit_13_8456135112.jpg'
     }
 ])
 
