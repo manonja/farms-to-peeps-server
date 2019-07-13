@@ -1,24 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### The App
+Platform connecting farmers with people, where farmers can add their products online and people can add them to their basket.
+You can signin/signup as a farmer or as a customer. Built with RESTful API architecture and CRUD functionalities. 
 
-Things you may want to cover:
+![Alt Text](https://media.giphy.com/media/RrU8f9lImvJja/giphy.gif)
 
-* Ruby version
 
-* System dependencies
+### Motivations
+Build a fullstack app that uses Ruby for the backend with PostgreSQL and React for the frontend.  
 
-* Configuration
+### Technical details
+- Front-end built with **React** and **React Router**.
+- Styling with pure **CSS** and **MDBootstrap**.
+- **PostgreSQL** database.
+- Authentication with **JWT**.
+- Developed a **Ruby on Rails** API backend with 5 different endpoints: for users, farmers, customers, products and categories.
+- Used **serializer** to format the JSON file.
 
-* Database creation
+### Installation
+Fork and clone the project https://github.com/manonja/farms-to-people-frontend
+Fork and clone the project https://github.com/manonja/farms-to-peeps-server
 
-* Database initialization
+In your terminal, go to `farms-to-people-server`
+- run `rails db:create`
+- `rails db:migrate`
+- `rails db:seed`
+- `rails s`
 
-* How to run the test suite
+The server will start on http://localhost:3001
 
-* Services (job queues, cache servers, search engines, etc.)
+Then go to `farms-to-people-frontend`
+- run `npm install`
+- `npm start`
 
-* Deployment instructions
+The app will run on http://localhost:3000
 
-* ...
+### How to use?
+If you are a new user, signup (as a farmer or as a customer), otherwise, login into your account. 
+
+If you are a farmer, you can see the current product you have on sale. You can add as many products as you want, and delete them. 
+
+If you are a customer, you can see all the products farmers have on sale, select different categories, and add products to you basket. You can see your basket and delete products as well. Clicking on checkout won't do anything for now. 
+
+
+### Author
+Manon Jacquin (https://github.com/manonja)
